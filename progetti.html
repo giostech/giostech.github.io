@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>notgio.</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Stili esistenti */
+  /* ... */
+
+  /* Stili per la sfera azzurra */
+  .blue-sphere {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 0, 255, 0.5); /* Colore di sfondo con trasparenza */
+  border-radius: 50%;
+  position: fixed;
+  bottom: -100px; /* Posiziona la sfera in modo che sia visibile solo metà */
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(15px); /* Applica l'effetto di blur */
+  animation: pulseBlur 5s infinite;
+}
+
+@keyframes pulseBlur {
+  0% {
+    filter: blur(15px);
+    opacity: 0.5;
+    transform: translateX(-50%) scale(1); /* Dimensione iniziale */
+  }
+  50% {
+    filter: blur(25px);
+    opacity: 0.5;
+    transform: translateX(-50%) scale(5.5); /* Cresce del 50% */
+  }
+  100% {
+    filter: blur(15px);
+    opacity: 0.5;
+    transform: translateX(-50%) scale(1); /* Ritorna alla dimensione iniziale */
+  }
+}
+
+</style>
+</head>
+<body>
+  <!-- Contenuto esistente -->
+  <!-- ... -->
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'JetBrains Mono', monospace;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      
+    }
+    h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    p {
+      font-size: 1.5em;
+      margin: 20px 0;
+    }
+    .transparent-btn {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: all 0.3s ease;
+    }
+    .transparent-btn:hover {
+      background-color: white;
+      color: #121212;
+    }
+  </style>
+  </head>
+  <body>
+    <h1>Mannaggia ai negri bastardi.</h1>
+    <p>Froci del cazzo bruciati</p>
+    <a href="2.html" class="transparent-btn">Concordo</a>
+
+  <!-- Sfera azzurra con blur -->
+  <div class="blue-sphere"></div>
+</body>
+</html>
